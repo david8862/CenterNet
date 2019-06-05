@@ -62,6 +62,8 @@ class Debugger(object):
       self.focal_length = 721.5377
       self.W = 1242
       self.H = 375
+    elif num_classes == 4 or dataset == 'roborock':
+      self.names = roborock_class_name
     num_classes = len(self.names)
     self.down_ratio=down_ratio
     # for bird view
@@ -439,6 +441,8 @@ gta_class_name = [
 pascal_class_name = ["aeroplane", "bicycle", "bird", "boat", "bottle", "bus", 
   "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", 
   "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
+
+roborock_class_name = ["bar stool", "shoe", "pet feces", "wire"]
 
 coco_class_name = [
      'person', 'bicycle', 'car', 'motorcycle', 'airplane',
